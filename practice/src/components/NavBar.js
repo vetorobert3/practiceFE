@@ -1,7 +1,7 @@
 import React from 'react';
-import Route from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function App() {
+function NavBar() {
   return (
     <div className="NavBar">
       <Link to='/'>Feed</Link>

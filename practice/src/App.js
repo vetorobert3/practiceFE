@@ -1,9 +1,10 @@
 import React from 'react';
-import Route from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import NavBar from './components/NavBar';
 import Feed from './components/Feed';
 import Form from './components/Form';
+
 import './App.css';
 
 function App() {
