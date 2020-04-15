@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Axios from 'axios';
+import axios from 'axios';
 
 function Form() {
 
@@ -13,13 +13,13 @@ function Form() {
     setPost({...post, [event.target.name]: event.target.value})
   }
 
-  // function submitHandler() {
-  //   Axios.post('url', post)
-  // }
+  function submitHandler() {
+    axios.post('http://practice-be.herokuapp.com/', post)
+  }
 
   return (
     <div className='form'>
-      <form>
+      <form onSubmit={submitHandler}>
         <input 
           type='text' 
           name='name' 

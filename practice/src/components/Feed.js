@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function Feed() {
 
-  // const [users, setUsers] = useState();
+  const [users, setUsers] = useState();
 
   useEffect(() => {
     axios.get('http://practice-be.herokuapp.com/')
