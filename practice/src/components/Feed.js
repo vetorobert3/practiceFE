@@ -3,23 +3,10 @@ import axios from 'axios';
 
 function Feed() {
 
-  const [users, setUsers] = useState([
-    {
-      name: 'Ryan',
-      comment: 'Hello'
-    },
-    {
-      name: 'Jason',
-      comment: 'World'
-    },
-    {
-      name: 'Conary',
-      comment: 'Uhhhhhh'
-    }
-  ]);
+  const [users, setUsers] = useState();
 
   useEffect(() => {
-    axios.get('url')
+    axios.get('http://practice-be.herokuapp.com/')
     .then(res => {
       console.log(res)
       setUsers(res)
@@ -33,8 +20,8 @@ function Feed() {
     <div className="Feed">
       {users.map(user => (
         <div>
-          <div>user.name</div>
-          <div>user.commit</div>
+          <div>{user.name}</div>
+          <div>{user.commit}</div>
         </div>
       ))}
     </div>
